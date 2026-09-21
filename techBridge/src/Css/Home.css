@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+.tb-canvas {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tb-slate-900);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   1. HERO STAGE (STRICT 100VH + 110PX TOP NAVBAR OFFSET)
+   ========================================================================== */
+.tb-hero-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 640px;
+  max-height: 100vh;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  /* Top clearance offsets floating navbars cleanly */
+  padding-top: 110px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tb-hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(255, 255, 255, 0.65) 45%,
+      rgba(255, 255, 255, 0.05) 100%);
+  z-index: 1;
+}
+
+.tb-hero-container {
+  width: 100%;
+}
+
+.tb-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.15rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.tb-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+.tb-hero-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.35rem, 3.6vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--tb-slate-900);
+  margin-bottom: 1.1rem;
+}
+
+.tb-gradient-title {
+  background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tb-hero-subtext {
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--tb-slate-700);
+  max-width: 580px;
+  margin-bottom: 1.65rem;
+}
+
+.tb-btn-primary {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--tb-blue-600);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.tb-btn-primary:hover {
+  background-color: var(--tb-blue-700);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.tb-btn-outline {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--tb-slate-800);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--tb-slate-300);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.tb-btn-outline:hover {
+  background-color: #ffffff;
+  border-color: var(--tb-slate-500);
+}
+
+.tb-hero-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.tb-trust-node {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--tb-slate-800);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.tb-trust-icon {
+  color: var(--tb-blue-600);
+}
+
+.tb-trust-separator {
+  width: 1px;
+  height: 12px;
+  background-color: var(--tb-slate-300);
+}
+
+/* ==========================================================================
+   2. MARQUEE STRIP (SITS DIRECTLY BELOW HERO 100VH)
+   ========================================================================== */
+.tb-ticker-bar {
+  position: relative;
+  z-index: 5;
+  background-color: #ffffff;
+  border-top: 1px solid var(--tb-slate-200);
+  border-bottom: 1px solid var(--tb-slate-200);
+  overflow: hidden;
+  padding: 0.85rem 0;
+}
+
+.tb-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: tbTickerAnim 34s linear infinite;
+}
+
+.tb-ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--tb-slate-500);
+}
+
+.tb-ticker-bullet {
+  color: var(--tb-slate-300);
+}
+
+@keyframes tbTickerAnim {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================================================
+   3. BASE CONTENT SECTIONS
+   ========================================================================== */
+.tb-content-section {
+  padding: 5rem 0;
+}
+
+.tb-section-contrast {
+  background-color: var(--tb-slate-50);
+}
+
+.tb-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tb-blue-600);
+  margin-bottom: 0.4rem;
+}
+
+.tb-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--tb-slate-900);
+}
+
+.tb-subtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tb-slate-500);
+}
+
+.tb-image-frame {
+  position: relative;
+}
+
+.tb-framed-img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--tb-slate-200);
+}
+
+.tb-floating-stat-card {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  max-width: 280px;
+}
+
+.tb-stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  line-height: 1;
+}
+
+.tb-stat-label {
+  font-size: 0.78rem;
+  color: var(--tb-slate-500);
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+
+.tb-feature-tile {
+  background-color: var(--tb-slate-50);
+  border: 1px solid var(--tb-slate-200);
+  padding: 1.25rem;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.tb-feature-tile h6 {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+  color: var(--tb-slate-900);
+}
+
+.tb-feature-tile p {
+  font-size: 0.82rem;
+  color: var(--tb-slate-500);
+  margin-bottom: 0;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   4. PROBLEM & SOLUTION CARDS
+   ========================================================================== */
+.tb-solution-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-problem-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #dc2626;
+  background-color: #fef2f2;
+  padding: 3px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 0.85rem;
+}
+
+.tb-solution-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  color: var(--tb-slate-900);
+}
+
+.tb-problem-desc {
+  font-size: 0.85rem;
+  color: var(--tb-slate-500);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.tb-solution-box {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--tb-slate-200);
+}
+
+.tb-solution-title {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tb-blue-600);
+  margin-bottom: 0.35rem;
+}
+
+.tb-solution-box p {
+  font-size: 0.82rem;
+  color: var(--tb-slate-700);
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   5. WORK REDUCTION ITEMS
+   ========================================================================== */
+.tb-work-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background-color: var(--tb-slate-50);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+}
+
+.tb-work-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  color: var(--tb-blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. PRODUCTS STORE GRID
+   ========================================================================== */
+.tb-link-action {
+  background: none;
+  border: none;
+  color: var(--tb-blue-600);
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.tb-link-action:hover {
+  color: var(--tb-blue-700);
+  text-decoration: underline;
+}
+
+.tb-product-tile {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tb-product-tile:hover {
+  border-color: var(--tb-slate-300);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+.tb-tile-image-wrapper {
+  position: relative;
+  height: 175px;
+  background-color: var(--tb-slate-100);
+}
+
+.tb-tile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tb-stock-chip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.tb-stock-chip.in {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.tb-stock-chip.out {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.tb-wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tb-wishlist-btn:hover {
+  background-color: var(--tb-slate-50);
+}
+
+.tb-heart-active {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.tb-heart-idle {
+  color: var(--tb-slate-500);
+}
+
+.tb-tile-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tb-tile-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.tb-tile-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--tb-slate-100);
+}
+
+.tb-tile-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--tb-slate-900);
+}
+
+.tb-btn-add {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.tb-btn-add:hover {
+  background-color: #000000;
+}
+
+/* ==========================================================================
+   7. 8-STEP WORKFLOW CARDS
+   ========================================================================== */
+.tb-step-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  padding: 1.4rem 1.2rem;
+  height: 100%;
+}
+
+.tb-step-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--tb-blue-600);
+  background-color: var(--tb-blue-50);
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.tb-step-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: var(--tb-slate-900);
+}
+
+.tb-step-desc {
+  font-size: 0.82rem;
+  color: var(--tb-slate-500);
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   8. ROLE PANELS
+   ========================================================================== */
+.tb-role-panel {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  padding: 1.85rem;
+  height: 100%;
+}
+
+.tb-role-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tb-blue-600);
+  margin-bottom: 0.5rem;
+}
+
+.tb-role-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  margin-bottom: 0.35rem;
+}
+
+.tb-role-desc {
+  font-size: 0.85rem;
+  color: var(--tb-slate-500);
+  margin-bottom: 1.25rem;
+}
+
+.tb-role-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  color: var(--tb-slate-700);
+}
+
+.tb-role-list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.tb-role-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--tb-blue-600);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   9. CTA FOOTER
+   ========================================================================== */
+.tb-cta-section {
+  background-color: var(--tb-slate-900);
+  padding: 5.5rem 0;
+  color: #ffffff;
+}
+
+.tb-cta-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.tb-cta-subtext {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.tb-btn-cta-white {
+  background-color: #ffffff;
+  color: var(--tb-slate-900);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-cta-white:hover {
+  background-color: #f1f5f9;
+}
+
+.tb-btn-cta-outline {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tb-btn-cta-outline:hover {
+  background-color: #1e293b;
+  border-color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .tb-hero-stage {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .tb-hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .tb-content-section {
+    padding: 4rem 0;
+  }
+}

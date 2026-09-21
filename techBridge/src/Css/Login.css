@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+.tb-auth-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 60px;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.tb-auth-wrapper {
+  max-width: 460px;
+  width: 100%;
+}
+
+/* Auth Card with Solid White Backdrop and Crisp Elevation */
+.tb-auth-card {
+  background: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 20px;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+}
+
+/* TechBridge Official Brand Logo Badge */
+.tb-main-logo-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tb-slate-900);
+  padding: 10px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tb-main-logo-pill:hover {
+  transform: translateY(-2px);
+  background-color: #000000;
+}
+
+.tb-logo-text {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.tb-auth-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  letter-spacing: -0.02em;
+}
+
+.tb-auth-subtitle {
+  font-size: 0.88rem;
+  color: var(--tb-slate-500);
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* Form Controls */
+.tb-input-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tb-slate-700);
+  margin-bottom: 0.35rem;
+}
+
+.tb-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tb-field-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--tb-slate-400);
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.tb-input-control {
+  padding: 0.7rem 2.6rem 0.7rem 2.6rem !important;
+  border-color: var(--tb-slate-200) !important;
+  border-radius: 10px !important;
+  font-size: 0.88rem !important;
+  color: var(--tb-slate-900) !important;
+  background-color: var(--tb-slate-50) !important;
+  transition: all 0.2s ease;
+}
+
+.tb-input-control:focus {
+  background-color: #ffffff !important;
+  border-color: var(--tb-blue-600) !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1) !important;
+}
+
+.tb-input-wrapper:focus-within .tb-field-icon {
+  color: var(--tb-blue-600);
+}
+
+.tb-input-control.is-invalid {
+  border-color: #ef4444 !important;
+  background-color: #fffaf0 !important;
+}
+
+.tb-input-error {
+  font-size: 0.74rem;
+  color: #ef4444;
+  font-weight: 600;
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tb-eye-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--tb-slate-400);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: color 0.15s ease;
+}
+
+.tb-eye-btn:hover {
+  color: var(--tb-slate-700);
+}
+
+.tb-link-forgot {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--tb-blue-600);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.tb-link-forgot:hover {
+  color: var(--tb-blue-700);
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.tb-auth-submit-btn {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+}
+
+.tb-auth-submit-btn:hover:not(:disabled) {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.tb-auth-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Footer & Trust Row */
+.tb-auth-card-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--tb-slate-100);
+}
+
+.tb-link-signup {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.15s ease;
+}
+
+.tb-link-signup:hover {
+  color: var(--tb-blue-700);
+  text-decoration: underline;
+}
+
+.tb-trust-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--tb-slate-200);
+}
+
+/* ==========================================================================
+   FORCE INPUT TEXT CLEARANCE (FIX ICON, TEXT & EYE COLLISION)
+   ========================================================================== */
+
+/* 1. Ensure the wrapper acts as a positioned container */
+.tb-input-wrapper {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 2. Anchor left field icon vertically centered */
+.tb-input-wrapper .tb-field-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  pointer-events: none !important;
+  color: #94a3b8 !important;
+  width: 17px !important;
+  height: 17px !important;
+}
+
+/* 3. Override Bootstrap defaults and force text to start past the left icon */
+.tb-input-wrapper input.tb-input-control,
+.tb-input-wrapper input.form-control {
+  padding-left: 44px !important;
+  /* 14px offset + 17px icon + 13px gap */
+  padding-right: 44px !important;
+  /* Clearance for eye toggle */
+  height: 46px !important;
+  line-height: 46px !important;
+  box-sizing: border-box !important;
+  text-indent: 0 !important;
+}
+
+/* 4. Suppress Bootstrap's default red exclamation icon that overlaps the eye */
+.tb-input-wrapper input.form-control.is-invalid,
+.tb-input-wrapper input.tb-input-control.is-invalid {
+  background-image: none !important;
+  border-color: #ef4444 !important;
+  background-color: #fffaf0 !important;
+}
+
+/* 5. Anchor the password toggle eye button on the right */
+.tb-input-wrapper .tb-eye-btn {
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  background: none !important;
+  border: none !important;
+  padding: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+@media (max-width: 576px) {
+  .tb-auth-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tb-auth-title {
+    font-size: 1.55rem;
+  }
+}

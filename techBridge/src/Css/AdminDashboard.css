@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+.tb-admin-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--tb-slate-50);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tb-slate-900);
+}
+
+.font-grotesk {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.extra-small {
+  font-size: 0.76rem !important;
+}
+
+/* ==========================================================================
+   1. SIDEBAR STYLING
+   ========================================================================== */
+.tb-admin-sidebar {
+  width: 270px;
+  min-width: 270px;
+  background-color: #ffffff;
+  border-right: 1px solid var(--tb-slate-200);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem 1.25rem 1rem;
+  height: 100vh;
+  z-index: 100;
+}
+
+.tb-admin-brand-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--tb-slate-200);
+  margin-bottom: 1.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.tb-admin-sub-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tb-admin-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tb-admin-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: var(--tb-slate-500);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.tb-admin-menu-item:hover {
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-900);
+}
+
+.tb-admin-menu-item.active {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.tb-admin-sidebar-footer {
+  border-top: 1px solid var(--tb-slate-200);
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   2. MAIN CONTENT VIEWPORT
+   ========================================================================== */
+.tb-admin-main-viewport {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tb-admin-content-body {
+  width: 100%;
+  max-width: 1280px;
+}
+
+/* Card Foundation */
+.tb-admin-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+/* KPI Summary Cards */
+.tb-kpi-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tb-kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--tb-blue-600);
+}
+
+.tb-kpi-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--tb-slate-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tb-kpi-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: var(--tb-blue-50);
+  color: var(--tb-blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-kpi-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  font-size: 1.8rem;
+}
+
+/* ==========================================================================
+   3. TABLE STYLING
+   ========================================================================== */
+.tb-custom-table {
+  border-collapse: separate;
+  border-spacing: 0 6px;
+}
+
+.tb-custom-table thead th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--tb-slate-500);
+  border-bottom: 2px solid var(--tb-slate-200);
+  padding: 10px 14px;
+}
+
+.tb-custom-table tbody tr {
+  background-color: #ffffff;
+  transition: background-color 0.15s ease;
+}
+
+.tb-custom-table tbody tr:hover {
+  background-color: var(--tb-slate-50);
+}
+
+.tb-custom-table tbody td {
+  padding: 12px 14px;
+  border-top: 1px solid var(--tb-slate-100);
+  border-bottom: 1px solid var(--tb-slate-100);
+}
+
+.tb-admin-select {
+  font-size: 0.78rem !important;
+  border-radius: 8px !important;
+  border-color: var(--tb-slate-300) !important;
+  padding: 4px 8px !important;
+  width: 140px;
+}
+
+/* Badges & Status Tags */
+.tb-badge-dark {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.tb-status-pill {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tb-status-pill.active {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tb-status-pill.inactive {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tb-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.tb-tag.success {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tb-tag.warning {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.tb-tag.danger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tb-tag.secondary {
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-600);
+  border: 1px solid var(--tb-slate-200);
+}
+
+.tb-badge-danger {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tb-badge-warning {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.tb-badge-secondary {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-500);
+  border: 1px solid var(--tb-slate-200);
+}
+
+/* ==========================================================================
+   4. UNIFIED SKU CARDS (PREVENTS JUMPING & WEIRD PADDING)
+   ========================================================================== */
+.tb-sku-card {
+  background: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tb-sku-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--tb-slate-300);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.tb-sku-thumb-container {
+  width: 100%;
+  height: 170px;
+  background-color: var(--tb-slate-50);
+  border-bottom: 1px solid var(--tb-slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.tb-sku-thumb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.2s ease;
+}
+
+.tb-sku-card:hover .tb-sku-thumb-image {
+  transform: scale(1.04);
+}
+
+.tb-sku-content {
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tb-sku-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  height: 2.7em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tb-sku-model {
+  font-size: 0.74rem;
+  color: var(--tb-slate-500);
+  margin-bottom: 0.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tb-sku-desc {
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: var(--tb-slate-500);
+  margin-bottom: 0.85rem;
+  height: 2.9em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tb-sku-metrics-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--tb-slate-200);
+  margin-top: auto;
+}
+
+.tb-sku-price {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.12rem;
+  color: var(--tb-blue-600);
+}
+
+.tb-sku-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.9rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--tb-slate-100);
+}
+
+.tb-sku-btn-edit {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid var(--tb-slate-300);
+  color: var(--tb-slate-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.tb-sku-btn-edit:hover {
+  background-color: var(--tb-slate-900);
+  border-color: var(--tb-slate-900);
+  color: #ffffff;
+}
+
+.tb-sku-btn-delete {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.tb-sku-btn-delete:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   5. FORMS & INPUTS
+   ========================================================================== */
+.tb-form-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--tb-slate-700);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.tb-form-control {
+  font-size: 0.88rem !important;
+  border-radius: 10px !important;
+  border-color: var(--tb-slate-200) !important;
+  padding: 0.6rem 0.85rem !important;
+  color: var(--tb-slate-900) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tb-form-control:focus {
+  border-color: var(--tb-blue-600) !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12) !important;
+  outline: none;
+}
+
+.tb-form-control::placeholder {
+  color: var(--tb-slate-400) !important;
+  font-size: 0.84rem;
+}
+
+.tb-file-dropzone {
+  position: relative;
+  border: 2px dashed var(--tb-slate-300);
+  border-radius: 14px;
+  background-color: var(--tb-slate-50);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tb-file-dropzone:hover {
+  background-color: var(--tb-blue-50);
+  border-color: var(--tb-blue-600);
+}
+
+.tb-file-input-hidden {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tb-btn-dark {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-dark:hover {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+}
+
+.tb-btn-outline {
+  border: 1px solid var(--tb-slate-300);
+  background-color: #ffffff;
+  color: var(--tb-slate-700);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tb-btn-outline:hover {
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-900);
+  border-color: var(--tb-slate-400);
+}
+
+.spin-icon {
+  animation: tbSpin 1s linear infinite;
+}
+
+@keyframes tbSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+   6. MODAL STYLING
+   ========================================================================== */
+.tb-admin-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+  animation: tbFadeIn 0.2s ease-out;
+}
+
+.tb-admin-modal-dialog {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  border: 1px solid var(--tb-slate-200);
+  animation: tbModalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tb-admin-modal-header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--tb-slate-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+.tb-modal-close-btn {
+  background-color: var(--tb-slate-100);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tb-slate-600);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tb-modal-close-btn:hover {
+  background-color: var(--tb-slate-200);
+  color: var(--tb-slate-900);
+}
+
+.tb-admin-modal-body {
+  padding: 1.5rem 1.75rem;
+  overflow-y: auto;
+}
+
+.tb-admin-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tb-admin-modal-body::-webkit-scrollbar-thumb {
+  background: var(--tb-slate-300);
+  border-radius: 10px;
+}
+
+.tb-admin-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--tb-slate-200);
+}
+
+@keyframes tbFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tbModalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================================
+   7. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 991px) {
+  .tb-admin-layout {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .tb-admin-sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--tb-slate-200);
+  }
+
+  .tb-admin-menu-list {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+  }
+
+  .tb-admin-main-viewport {
+    height: auto;
+    overflow-y: visible;
+    padding: 1.5rem 1rem;
+  }
+}

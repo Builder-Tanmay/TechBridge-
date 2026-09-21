@@ -1,0 +1,149 @@
+/* ==========================================================================
+   TechBridge Light Footer Stylesheet
+   ========================================================================== */
+
+/* Section Background */
+.footer-section {
+  background-color: #f8fafc !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Plus Jakarta Sans", sans-serif;
+  border-top: 1px solid #e2e8f0;
+}
+
+.extra-small {
+  font-size: 0.74rem !important;
+}
+
+/* Watermark Text */
+.watermark-text {
+  font-size: clamp(3rem, 12vw, 9.5rem);
+  font-weight: 900;
+  color: rgba(203, 213, 225, 0.28);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 2px;
+}
+
+/* Operational Dot */
+.tb-light-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #0284c7;
+  box-shadow: 0 0 0 2.5px rgba(2, 132, 199, 0.25);
+}
+
+/* Navigation Links */
+.footer-link {
+  color: #475569;
+  font-size: 0.88rem;
+  transition: all 0.15s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #0284c7;
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   CONTACT PILL CARDS (FIXED ALIGNMENT & NO OVERFLOW)
+   ========================================================================== */
+.tb-contact-pill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.contact-pill-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.contact-pill-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08) !important;
+}
+
+.bg-sky-light {
+  background-color: #e0f2fe;
+}
+
+.icon-box {
+  width: 36px;
+  height: 36px;
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.contact-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.contact-text-box span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   SOCIAL ICONS & BADGE
+   ========================================================================== */
+.social-icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 12px;
+  color: #334155;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon-card:hover {
+  color: #0284c7;
+  border-color: #0284c7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Center Brand Square Badge */
+.brand-square-badge {
+  width: 80px;
+  height: 80px;
+  background-color: #0d1117 !important;
+  border: 4px solid #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-square-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 17, 23, 0.25) !important;
+}
+
+.brand-square-badge span {
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}

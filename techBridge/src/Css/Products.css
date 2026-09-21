@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+.tb-products-canvas {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tb-slate-900);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.extra-small {
+  font-size: 0.78rem !important;
+}
+
+.tb-gradient-title {
+  background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   1. PRODUCTS HALF-SCREEN HERO BANNER (CLEAN & SHARP - NO FADE)
+   ========================================================================== */
+.tb-products-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 480px;
+  max-height: 580px;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tb-products-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.tb-products-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+.tb-products-hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--tb-slate-900);
+  margin-bottom: 0.9rem;
+}
+
+.tb-products-hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--tb-slate-700);
+  max-width: 600px;
+  margin-bottom: 0;
+}
+
+/* Hero Search Bar */
+.tb-products-search-box {
+  position: relative;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+}
+
+.tb-products-search-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--tb-slate-400);
+  pointer-events: none;
+}
+
+.tb-products-search-input {
+  width: 100%;
+  padding: 0.8rem 2.4rem 0.8rem 2.85rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--tb-slate-300);
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  color: var(--tb-slate-900);
+  outline: none;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  transition: all 0.2s ease;
+}
+
+.tb-products-search-input:focus {
+  border-color: var(--tb-blue-600);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
+.tb-products-search-clear {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--tb-slate-400);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   2. SIDEBAR FILTER PANEL
+   ========================================================================== */
+.tb-content-section {
+  padding: 4.5rem 0;
+}
+
+.tb-section-contrast {
+  background-color: var(--tb-slate-50);
+}
+
+.tb-filter-panel {
+  border-color: var(--tb-slate-200) !important;
+}
+
+.tb-filter-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tb-slate-700);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.tb-filter-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tb-search-icon-inside {
+  position: absolute;
+  left: 10px;
+  color: var(--tb-slate-400);
+  pointer-events: none;
+}
+
+.tb-filter-search-input {
+  padding-left: 2rem !important;
+  font-size: 0.8rem !important;
+  border-color: var(--tb-slate-200) !important;
+  border-radius: 6px !important;
+}
+
+.tb-filter-search-input:focus {
+  border-color: var(--tb-blue-600) !important;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.1) !important;
+}
+
+/* Custom Styled Checkboxes */
+.tb-checkbox-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tb-checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tb-custom-check {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--tb-slate-300);
+  border-radius: 4px;
+  margin-right: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.tb-checkbox-item:hover input~.tb-custom-check {
+  border-color: var(--tb-blue-600);
+}
+
+.tb-checkbox-item input:checked~.tb-custom-check {
+  background-color: var(--tb-blue-600);
+  border-color: var(--tb-blue-600);
+}
+
+.tb-checkbox-item input:checked~.tb-custom-check::after {
+  content: "";
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+.tb-check-text {
+  font-size: 0.82rem;
+  color: var(--tb-slate-700);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   3. PRODUCTS GRID & TILES
+   ========================================================================== */
+.tb-sort-select {
+  width: auto;
+  border-color: var(--tb-slate-200) !important;
+  font-size: 0.8rem !important;
+}
+
+.tb-product-tile {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.tb-product-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--tb-slate-300);
+  box-shadow: 0 10px 24px -5px rgba(15, 23, 42, 0.06);
+}
+
+.tb-tile-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tb-tile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px;
+  display: block;
+}
+
+/* Small Stock Badge */
+.tb-stock-chip {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  bottom: auto !important;
+  right: auto !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  z-index: 5 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tb-stock-chip.in {
+  background-color: #dcfce7 !important;
+  color: #15803d !important;
+  border: 1px solid #bbf7d0 !important;
+}
+
+.tb-stock-chip.out {
+  background-color: #fee2e2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fecaca !important;
+}
+
+/* Wishlist Button */
+.tb-wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tb-wishlist-btn:hover {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+  transform: scale(1.08);
+}
+
+.tb-wishlist-btn.active {
+  background-color: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.tb-heart-active {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.tb-heart-idle {
+  color: var(--tb-slate-500);
+}
+
+/* Card Body */
+.tb-tile-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tb-brand-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tb-blue-600);
+  background-color: var(--tb-blue-50);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tb-cat-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--tb-slate-500);
+}
+
+.tb-tile-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  margin-top: 0.5rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.7rem;
+}
+
+.tb-compat-block {
+  background-color: var(--tb-slate-50);
+  border: 1px solid var(--tb-slate-200);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.compat-label {
+  display: block;
+  font-weight: 600;
+  color: var(--tb-slate-500);
+  margin-bottom: 2px;
+}
+
+.compat-text {
+  color: var(--tb-slate-700);
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tb-tile-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--tb-slate-100);
+}
+
+.tb-tile-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--tb-slate-900);
+}
+
+.tb-btn-add-cart {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-add-cart:hover:not(:disabled) {
+  background-color: #000000;
+}
+
+.tb-btn-add-cart:disabled {
+  background-color: var(--tb-slate-300);
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   4. PAGINATION CONTROLS (1, 2, 3, 4...)
+   ========================================================================== */
+.tb-pagination-controls {
+  user-select: none;
+}
+
+.tb-page-number-btn {
+  background-color: #ffffff;
+  color: var(--tb-slate-700);
+  border: 1px solid var(--tb-slate-200);
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.tb-page-number-btn:hover {
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-900);
+  border-color: var(--tb-slate-300);
+}
+
+.tb-page-number-btn.active {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+  border-color: var(--tb-blue-600);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+}
+
+.tb-page-nav-btn {
+  background-color: #ffffff;
+  color: var(--tb-slate-700);
+  border: 1px solid var(--tb-slate-200);
+  font-size: 0.8rem;
+  font-weight: 600;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.tb-page-nav-btn:hover:not(:disabled) {
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-900);
+  border-color: var(--tb-slate-300);
+}
+
+.tb-page-nav-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background-color: var(--tb-slate-50);
+}
+
+/* ==========================================================================
+   5. BOTTOM CTA
+   ========================================================================== */
+.tb-cta-section {
+  background-color: var(--tb-slate-900);
+  padding: 5.5rem 0;
+  color: #ffffff;
+}
+
+.tb-cta-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+
+.tb-cta-subtext {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.tb-btn-cta-white {
+  background-color: #ffffff;
+  color: var(--tb-slate-900);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-cta-white:hover {
+  background-color: #f1f5f9;
+}
+
+.tb-btn-cta-outline {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tb-btn-cta-outline:hover {
+  background-color: #1e293b;
+  border-color: #64748b;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 991px) {
+  .tb-products-hero {
+    height: auto;
+    min-height: 440px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .tb-products-hero-title {
+    font-size: 2.3rem;
+  }
+
+  .tb-content-section {
+    padding: 3.5rem 0;
+  }
+}

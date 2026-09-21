@@ -1,0 +1,485 @@
+/* ==========================================================================
+   TechBridge Header - Ultra Transparent Glassmorphism Stylesheet
+   ========================================================================== */
+
+/* Header Layer Index */
+.tb-header-z {
+  z-index: 1040;
+}
+
+/* Outer Glassmorphism Navbar - Ultra Transparent */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow:
+    0 8px 32px rgba(15, 23, 42, 0.05),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.5) !important;
+  padding: 8px 20px;
+  gap: 16px;
+  width: 95%;
+  max-width: 1100px;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-navbar:hover {
+  background: rgba(255, 255, 255, 0.32) !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  box-shadow:
+    0 12px 36px rgba(15, 23, 42, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Vertical Line Dividers - Subtle Transparent */
+.nav-divider {
+  width: 1px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  flex-shrink: 0;
+}
+
+/* Brand Logo */
+.brand-logo {
+  width: 88px;
+  height: 44px;
+  background-color: #0d1117;
+  border-radius: 10px !important;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+  background-color: #000000;
+}
+
+.logo-text {
+  font-size: 9px;
+  letter-spacing: 0.8px;
+}
+
+/* Nav Icons Bar Wrapper */
+.nav-icons-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+/* Fluid responsive spacing between desktop icons */
+.nav-icon-list {
+  gap: clamp(18px, 4.5vw, 68px) !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Icon Link Button & Direct Tooltip */
+.nav-icon-btn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  color: #1e293b;
+  border: 1.5px solid transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: transparent;
+}
+
+.nav-icon-btn:hover {
+  color: #0284c7;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-icon-btn.active-icon {
+  color: #0284c7;
+  border-color: rgba(2, 132, 199, 0.5);
+  background-color: rgba(2, 132, 199, 0.1);
+}
+
+/* Tooltip Popup on Hover */
+.nav-icon-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background-color: #000000;
+  color: #ffffff;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-icon-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Action Area Buttons */
+.nav-actions {
+  gap: 10px;
+}
+
+.btn-login-link {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  transition: color 0.2s ease;
+}
+
+.btn-login-link:hover {
+  color: #0284c7;
+}
+
+.btn-signup-pill {
+  background-color: #0f6292;
+  border: none;
+  color: #ffffff !important;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(15, 98, 146, 0.22);
+}
+
+.btn-signup-pill:hover {
+  background-color: #0c4d74;
+}
+
+.btn-signup-pill:active {
+  transform: scale(0.97);
+}
+
+/* Hamburger Toggle Button - More Transparent */
+.tb-mobile-toggle-btn {
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: #0f172a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tb-mobile-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+  color: #0284c7;
+}
+
+/* Mobile Slide-Down Drawer - Matched Transparent Glass */
+.tb-mobile-drawer {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+  animation: tbSlideFade 0.22s ease-out forwards;
+}
+
+.tb-mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.tb-mobile-link:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #0284c7;
+}
+
+.tb-mobile-link.active {
+  background-color: rgba(2, 132, 199, 0.12);
+  color: #0284c7;
+}
+
+@keyframes tbSlideFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* User Avatar Button */
+.user-dropdown-container {
+  position: relative;
+}
+
+.user-avatar-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #0d1117;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 0;
+}
+
+.user-avatar-btn:hover {
+  transform: scale(1.05);
+}
+
+.header-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dropdown-avatar-thumb {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1.5px solid #e2e8f0;
+}
+
+/* User Dropdown Menu */
+.user-dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 220px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  padding: 10px;
+  z-index: 2000;
+  animation: fadeIn 0.18s ease-in-out;
+}
+
+.dropdown-header-info {
+  padding: 6px 10px;
+}
+
+.dropdown-user-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dropdown-user-email {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  word-break: break-all;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 6px 0;
+}
+
+.dropdown-item-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-item-link:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.dropdown-item-link.logout-item {
+  color: #dc3545;
+}
+
+.dropdown-item-link.logout-item:hover {
+  background-color: #fef2f2;
+  color: #dc3545;
+}
+
+.dropdown-count-badge {
+  margin-left: auto;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+  line-height: 1.4;
+}
+
+/* Floating Bottom-Right Wishlist Pill - Ultra Transparent */
+.tb-floating-wishlist-pill {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  background: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+  border-radius: 9999px;
+  padding: 6px 18px 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tb-floating-wishlist-pill:hover {
+  background: rgba(255, 255, 255, 0.65) !important;
+  border-color: rgba(2, 132, 199, 0.4) !important;
+  transform: translateY(-3px) scale(1.03);
+}
+
+.tb-floating-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+.tb-floating-heart-icon {
+  color: #ffffff;
+  fill: #ef4444;
+  stroke: #ef4444;
+}
+
+.tb-floating-count-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+.tb-floating-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.3px;
+}
+
+/* Small Screens Adjustments */
+@media (max-width: 576px) {
+  .glass-navbar {
+    padding: 6px 12px;
+    gap: 8px;
+    width: 96%;
+  }
+
+  .brand-logo {
+    width: 78px;
+    height: 38px;
+  }
+
+  .logo-text {
+    font-size: 8px;
+  }
+
+  .btn-signup-pill {
+    padding: 6px 14px;
+    font-size: 12.5px;
+  }
+
+  .tb-floating-wishlist-pill {
+    bottom: 18px;
+    right: 18px;
+    padding: 5px 12px 5px 6px;
+  }
+
+  .tb-floating-icon-wrap {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tb-floating-label {
+    font-size: 12px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

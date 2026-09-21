@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+/* ROOT PAGE - STRICT HORIZONTAL OVERFLOW PREVENTION */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.tb-dash-canvas {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tb-slate-900);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.font-grotesk {
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.extra-small {
+  font-size: 0.76rem !important;
+}
+
+.inline-icon {
+  vertical-align: -2px;
+}
+
+.tb-gradient-title {
+  background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   1. HALF-SCREEN HERO BANNER (~60VH)
+   ========================================================================== */
+.tb-dash-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 440px;
+  max-height: 520px;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tb-dash-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.tb-dash-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+.tb-dash-hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--tb-slate-900);
+  margin-bottom: 0.9rem;
+}
+
+.tb-dash-hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--tb-slate-700);
+  max-width: 600px;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   2. DASHBOARD CONTENT SECTION & ELEVATED CARDS
+   ========================================================================== */
+.tb-content-section {
+  padding: 2.5rem 0 5rem;
+}
+
+.tb-section-contrast {
+  background-color: var(--tb-slate-50);
+}
+
+.tb-dash-card {
+  background: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* Profile Card Structure */
+.tb-profile-card {
+  padding: 1.5rem;
+}
+
+.tb-profile-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.tb-profile-left {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.tb-profile-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tb-profile-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.78rem;
+  color: var(--tb-slate-600);
+}
+
+.tb-profile-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.tb-profile-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.tb-dash-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--tb-slate-900), #1e293b);
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  flex-shrink: 0;
+}
+
+.tb-dash-role-badge {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.tb-status-pill {
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tb-status-pill.active {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tb-status-pill.inactive {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tb-btn-refresh {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  color: var(--tb-slate-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tb-btn-refresh:hover {
+  background: var(--tb-slate-100);
+  color: var(--tb-slate-900);
+  transform: rotate(90deg);
+}
+
+/* ==========================================================================
+   3. PREDICTIVE SERVICE BANNER - RESILIENT HORIZONTAL LAYOUT
+   ========================================================================== */
+.tb-reminder-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.tb-reminder-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.tb-reminder-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  /* Prevents flex child from squishing text vertically */
+}
+
+.tb-reminder-thumb {
+  width: 130px;
+  height: 92px;
+  min-width: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--tb-slate-200);
+  background-color: var(--tb-slate-100);
+  flex-shrink: 0;
+}
+
+.tb-reminder-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tb-reminder-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* Enables proper paragraph wrapping */
+}
+
+.tb-reminder-action {
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   4. NAVIGATION TABS DOCK
+   ========================================================================== */
+.tb-tab-dock {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.tb-tab-dock::-webkit-scrollbar {
+  display: none;
+}
+
+.tb-dock-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--tb-slate-500);
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tb-dock-btn:hover {
+  color: var(--tb-slate-900);
+}
+
+.tb-dock-btn.active {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+/* ==========================================================================
+   5. STATUS TAGS, BADGES, PIPELINES
+   ========================================================================== */
+.tb-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+.tb-tag.success {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.tb-tag.warning {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.tb-tag.danger {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tb-tag.secondary {
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-600);
+  border: 1px solid var(--tb-slate-200);
+}
+
+.tb-badge-danger {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.tb-badge-warning {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.tb-badge-secondary {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: var(--tb-slate-100);
+  color: var(--tb-slate-500);
+  border: 1px solid var(--tb-slate-200);
+}
+
+.tb-pipeline-box {
+  background-color: var(--tb-slate-50);
+  border: 1px solid var(--tb-slate-200);
+  overflow: hidden;
+}
+
+.tb-order-thumb-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.tb-order-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.tb-btn-dark {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-dark:hover {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   6. MODAL STYLES
+   ========================================================================== */
+.tb-modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.tb-dash-modal {
+  border-radius: 20px;
+}
+
+.tb-modal-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tb-slate-700);
+  margin-bottom: 0.35rem;
+}
+
+.tb-dash-input {
+  border-color: var(--tb-slate-200) !important;
+  font-size: 0.88rem !important;
+  border-radius: 8px !important;
+}
+
+.tb-dash-input:focus {
+  border-color: var(--tb-blue-600) !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1) !important;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 991px) {
+  .tb-dash-hero {
+    height: auto;
+    min-height: 420px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .tb-reminder-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tb-reminder-left {
+    width: 100%;
+  }
+
+  .tb-reminder-action {
+    width: 100%;
+  }
+
+  .tb-reminder-action .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .tb-reminder-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tb-reminder-thumb {
+    width: 100%;
+    height: 140px;
+  }
+
+  .tb-tab-dock {
+    border-radius: 16px;
+    padding: 6px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tb-dock-btn {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+  }
+}

@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+
+
+:root {
+
+  --tb-blue-600: #1d4ed8;
+
+  --tb-blue-700: #1e40af;
+
+  --tb-blue-50: #eff6ff;
+
+  --tb-slate-50: #f8fafc;
+
+  --tb-slate-100: #f1f5f9;
+
+  --tb-slate-200: #e2e8f0;
+
+  --tb-slate-300: #cbd5e1;
+
+  --tb-slate-400: #94a3b8;
+
+  --tb-slate-500: #64748b;
+
+  --tb-slate-700: #334155;
+
+  --tb-slate-800: #1e293b;
+
+  --tb-slate-900: #0f172a;
+
+}
+
+
+
+.tb-register-page {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 120px 20px 60px;
+
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  background-size: cover;
+
+  background-position: right bottom;
+
+  background-repeat: no-repeat;
+
+  box-sizing: border-box;
+
+}
+
+
+
+.tb-register-container {
+
+  max-width: 680px;
+
+  width: 100%;
+
+}
+
+
+
+/* Solid White Elevation Card matching Login & Products */
+
+.tb-register-card {
+
+  background: #ffffff;
+
+  border: 1px solid var(--tb-slate-200);
+
+  border-radius: 20px;
+
+  padding: 2.5rem 2.25rem;
+
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+
+}
+
+
+
+/* TechBridge Official Brand Logo Badge */
+
+.tb-main-logo-pill {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: var(--tb-slate-900);
+
+  padding: 10px 24px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+}
+
+
+
+.tb-main-logo-pill:hover {
+
+  transform: translateY(-2px);
+
+  background-color: #000000;
+
+}
+
+
+
+.tb-logo-text {
+
+  color: #ffffff;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 0.86rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+}
+
+
+
+.tb-register-title {
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 1.85rem;
+
+  font-weight: 700;
+
+  color: var(--tb-slate-900);
+
+  letter-spacing: -0.02em;
+
+}
+
+
+
+.tb-register-subtitle {
+
+  font-size: 0.88rem;
+
+  color: var(--tb-slate-500);
+
+  line-height: 1.45;
+
+  margin-bottom: 0;
+
+}
+
+
+
+/* Two-column Form Row */
+
+.tb-form-row {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+
+}
+
+
+
+@media (max-width: 640px) {
+
+  .tb-form-row {
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+  }
+
+}
+
+
+
+.tb-form-group {
+
+  margin-bottom: 16px;
+
+}
+
+
+
+.tb-form-label {
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  color: var(--tb-slate-700);
+
+  margin-bottom: 0.35rem;
+
+  display: block;
+
+}
+
+
+
+.tb-input-wrapper {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+
+
+.tb-input-icon {
+
+  position: absolute;
+
+  left: 14px;
+
+  color: var(--tb-slate-400);
+
+  pointer-events: none;
+
+  transition: color 0.2s ease;
+
+}
+
+
+
+.tb-form-control,
+
+.tb-form-select {
+
+  padding: 0.65rem 2.4rem 0.65rem 2.6rem !important;
+
+  border-color: var(--tb-slate-200) !important;
+
+  border-radius: 10px !important;
+
+  font-size: 0.88rem !important;
+
+  color: var(--tb-slate-900) !important;
+
+  background-color: var(--tb-slate-50) !important;
+
+  transition: all 0.2s ease;
+
+  width: 100%;
+
+}
+
+
+
+.tb-form-select {
+
+  padding-left: 2.6rem !important;
+
+  cursor: pointer;
+
+}
+
+
+
+.tb-form-control:focus,
+
+.tb-form-select:focus {
+
+  background-color: #ffffff !important;
+
+  border-color: var(--tb-blue-600) !important;
+
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1) !important;
+
+}
+
+
+
+.tb-input-wrapper:focus-within .tb-input-icon {
+
+  color: var(--tb-blue-600);
+
+}
+
+
+
+.tb-form-control.is-invalid,
+
+.tb-form-select.is-invalid {
+
+  border-color: #ef4444 !important;
+
+  background-color: #fffaf0 !important;
+
+}
+
+
+
+.tb-input-error {
+
+  font-size: 0.72rem;
+
+  color: #ef4444;
+
+  font-weight: 600;
+
+  margin-top: 0.3rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+}
+
+
+
+.tb-input-spinner {
+
+  position: absolute;
+
+  right: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+
+
+.tb-toggle-password-btn {
+
+  position: absolute;
+
+  right: 12px;
+
+  background: none;
+
+  border: none;
+
+  color: var(--tb-slate-400);
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 4px;
+
+  transition: color 0.15s ease;
+
+}
+
+
+
+.tb-toggle-password-btn:hover {
+
+  color: var(--tb-slate-700);
+
+}
+
+
+
+.tb-detected-msg {
+
+  color: #15803d;
+
+  font-size: 0.74rem;
+
+  font-weight: 600;
+
+  margin-top: 0.3rem;
+
+  display: block;
+
+}
+
+
+
+.tb-location-err-msg {
+
+  color: #b91c1c;
+
+  font-size: 0.74rem;
+
+  font-weight: 500;
+
+  margin-top: 0.3rem;
+
+  display: block;
+
+}
+
+
+
+/* Nearby Service Centers Box */
+
+.tb-nearby-centers-box {
+
+  background-color: var(--tb-slate-50);
+
+  border: 1px solid var(--tb-slate-200);
+
+}
+
+
+
+.tb-nearby-scroll {
+
+  max-height: 160px;
+
+  overflow-y: auto;
+
+  padding-right: 4px;
+
+}
+
+
+
+.tb-nearby-scroll::-webkit-scrollbar {
+
+  width: 5px;
+
+}
+
+
+
+.tb-nearby-scroll::-webkit-scrollbar-thumb {
+
+  background: var(--tb-slate-300);
+
+  border-radius: 4px;
+
+}
+
+
+
+.tb-type-pill {
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  padding: 2px 7px;
+
+  border-radius: 4px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  text-transform: uppercase;
+
+}
+
+
+
+.tb-type-pill.official {
+
+  background-color: #dcfce7;
+
+  color: #15803d;
+
+}
+
+
+
+.tb-type-pill.partner {
+
+  background-color: #fef3c7;
+
+  color: #b45309;
+
+}
+
+
+
+/* Submit Action Button */
+
+.tb-register-submit-btn {
+
+  background-color: var(--tb-slate-900);
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  font-size: 0.92rem;
+
+  padding: 0.75rem 1.4rem;
+
+  border-radius: 10px;
+
+  border: none;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.15s ease;
+
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+
+}
+
+
+
+.tb-register-submit-btn:hover:not(:disabled) {
+
+  background-color: var(--tb-blue-600);
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+}
+
+
+
+.tb-register-submit-btn:disabled {
+
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+}
+
+
+
+/* Footer Link */
+
+.tb-register-card-footer {
+
+  text-align: center;
+
+  margin-top: 1.5rem;
+
+  padding-top: 1.25rem;
+
+  border-top: 1px solid var(--tb-slate-100);
+
+}
+
+
+
+.tb-link-signin {
+
+  font-size: 0.88rem;
+
+  font-weight: 700;
+
+  color: var(--tb-blue-600);
+
+  text-decoration: none;
+
+  margin-left: 5px;
+
+  transition: color 0.15s ease;
+
+}
+
+
+
+.tb-link-signin:hover {
+
+  color: var(--tb-blue-700);
+
+  text-decoration: underline;
+
+}
+
+/* ==========================================================================
+   FORCE INPUT TEXT CLEARANCE (PREVENT ICON & TEXT COLLISION)
+   ========================================================================== */
+
+/* 1. Ensure the wrapper acts as a positioned container */
+.tb-input-wrapper {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 2. Lock the icon to the left */
+.tb-input-wrapper .tb-input-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  pointer-events: none !important;
+  color: #94a3b8 !important;
+  width: 17px !important;
+  height: 17px !important;
+}
+
+/* 3. Force strong left padding on the input so text starts AFTER the icon */
+.tb-input-wrapper input.tb-form-control,
+.tb-input-wrapper input.form-control {
+  padding-left: 44px !important;
+  /* 14px margin + 17px icon + 13px gap */
+  padding-right: 42px !important;
+  /* Space on right for password eye icon */
+  height: 44px !important;
+  line-height: 44px !important;
+  box-sizing: border-box !important;
+  text-indent: 0 !important;
+}
+
+/* 4. Match the gender select box */
+.tb-input-wrapper select.tb-form-select,
+.tb-input-wrapper select.form-select {
+  padding-left: 16px !important;
+  padding-right: 36px !important;
+  height: 44px !important;
+  box-sizing: border-box !important;
+}
+
+/* 5. Keep the password eye button aligned on the far right */
+.tb-input-wrapper .tb-toggle-password-btn {
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+}
+
+
+
+@media (max-width: 576px) {
+
+  .tb-register-card {
+
+    padding: 2rem 1.5rem;
+
+  }
+
+
+
+  .tb-register-title {
+
+    font-size: 1.55rem;
+
+  }
+
+}

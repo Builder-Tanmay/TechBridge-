@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+
+.tb-assist-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.text-primary-light {
+  color: #93c5fd;
+}
+
+.tb-contact-canvas {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tb-slate-900);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.extra-small {
+  font-size: 0.78rem !important;
+}
+
+.tb-gradient-title {
+  background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   1. CONTACT HALF-SCREEN HERO BANNER (~60VH, NO FADE/BLUR)
+   ========================================================================== */
+.tb-contact-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 480px;
+  max-height: 580px;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tb-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.tb-contact-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+.tb-contact-hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--tb-slate-900);
+  margin-bottom: 0.9rem;
+}
+
+.tb-contact-hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--tb-slate-700);
+  max-width: 600px;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   2. CONTENT SECTION: DETAILS & FORM CARDS
+   ========================================================================== */
+.tb-content-section {
+  padding: 4.5rem 0;
+}
+
+.tb-section-contrast {
+  background-color: var(--tb-slate-50);
+}
+
+/* Central Operations Card (Custom Image Background + Legibility Mask) */
+.tb-contact-info-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid var(--tb-slate-200);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+}
+
+.tb-contact-info-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg,
+      rgba(15, 23, 42, 0.88) 0%,
+      rgba(30, 41, 59, 0.82) 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.tb-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tb-contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Right Form Card */
+.tb-contact-form-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.tb-form-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tb-slate-700);
+  margin-bottom: 0.35rem;
+}
+
+.tb-form-input {
+  border-color: var(--tb-slate-200) !important;
+  font-size: 0.88rem !important;
+  border-radius: 8px !important;
+  padding: 0.65rem 0.9rem !important;
+  transition: all 0.2s ease;
+}
+
+.tb-form-input:focus {
+  border-color: var(--tb-blue-600) !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1) !important;
+}
+
+.tb-form-input.is-invalid {
+  border-color: #ef4444 !important;
+  background-color: #fffaf0;
+}
+
+.tb-phone-prefix {
+  background-color: var(--tb-slate-100);
+  border-color: var(--tb-slate-200);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--tb-slate-600);
+}
+
+.tb-error-msg {
+  font-size: 0.72rem;
+  color: #ef4444;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tb-btn-submit {
+  background-color: var(--tb-slate-900);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-submit:hover {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   3. BOTTOM CTA
+   ========================================================================== */
+.tb-cta-section {
+  background-color: var(--tb-slate-900);
+  padding: 5.5rem 0;
+  color: #ffffff;
+}
+
+.tb-cta-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+
+.tb-cta-subtext {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.tb-btn-cta-white {
+  background-color: #ffffff;
+  color: var(--tb-slate-900);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-cta-white:hover {
+  background-color: #f1f5f9;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .tb-contact-hero {
+    height: auto;
+    min-height: 440px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .tb-contact-hero-title {
+    font-size: 2.3rem;
+  }
+
+  .tb-contact-form-card {
+    padding: 1.75rem;
+  }
+}

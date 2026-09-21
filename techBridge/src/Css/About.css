@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --tb-blue-600: #1d4ed8;
+  --tb-blue-700: #1e40af;
+  --tb-blue-50: #eff6ff;
+  --tb-slate-50: #f8fafc;
+  --tb-slate-100: #f1f5f9;
+  --tb-slate-200: #e2e8f0;
+  --tb-slate-300: #cbd5e1;
+  --tb-slate-400: #94a3b8;
+  --tb-slate-500: #64748b;
+  --tb-slate-700: #334155;
+  --tb-slate-800: #1e293b;
+  --tb-slate-900: #0f172a;
+}
+
+.tb-about-canvas {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--tb-slate-900);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   1. HALF-SCREEN HERO BANNER (NO FADE / NO OVERLAY)
+   ========================================================================== */
+.tb-about-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 480px;
+  max-height: 580px;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tb-about-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.tb-about-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+}
+
+.tb-about-hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--tb-slate-900);
+  margin-bottom: 0.9rem;
+}
+
+.tb-gradient-title {
+  background: linear-gradient(90deg, #1d4ed8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tb-about-hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--tb-slate-700);
+  max-width: 580px;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   2. CONTENT SECTIONS BASE
+   ========================================================================== */
+.tb-content-section {
+  padding: 5rem 0;
+}
+
+.tb-section-contrast {
+  background-color: var(--tb-slate-50);
+}
+
+.tb-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tb-blue-600);
+  margin-bottom: 0.4rem;
+}
+
+.tb-headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--tb-slate-900);
+}
+
+.tb-subtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tb-slate-500);
+}
+
+.tb-about-media-wrapper {
+  position: relative;
+}
+
+.tb-about-framed-img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--tb-slate-200);
+}
+
+.tb-about-badge-card {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 10px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  max-width: 280px;
+}
+
+.tb-about-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--tb-blue-600);
+  line-height: 1;
+}
+
+.tb-about-stat-label {
+  font-size: 0.78rem;
+  color: var(--tb-slate-500);
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+
+.tb-about-box {
+  background-color: var(--tb-slate-50);
+  border: 1px solid var(--tb-slate-200);
+  padding: 1.25rem;
+  border-radius: 10px;
+  height: 100%;
+}
+
+/* ==========================================================================
+   3. FOUR PILLARS
+   ========================================================================== */
+.tb-pillar-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  padding: 1.75rem 1.4rem;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tb-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.06);
+}
+
+.tb-pillar-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: var(--tb-blue-50);
+  color: var(--tb-blue-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.tb-pillar-card h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--tb-slate-900);
+  margin-bottom: 0.65rem;
+}
+
+/* ==========================================================================
+   4. ROLES
+   ========================================================================== */
+.tb-about-role-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  padding: 1.85rem;
+  height: 100%;
+}
+
+.tb-role-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tb-blue-600);
+  background-color: var(--tb-blue-50);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tb-role-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  color: var(--tb-slate-700);
+}
+
+.tb-role-checklist li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.tb-role-checklist li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--tb-blue-600);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   5. REVIEWS & TESTIMONIALS
+   ========================================================================== */
+.tb-review-card {
+  background-color: #ffffff;
+  border: 1px solid var(--tb-slate-200);
+  border-radius: 12px;
+  padding: 1.65rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+}
+
+.tb-review-quote {
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--tb-slate-700);
+  margin-bottom: 1.25rem;
+}
+
+.tb-avatar-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--tb-blue-50);
+  color: var(--tb-blue-600);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   6. CTA FOOTER
+   ========================================================================== */
+.tb-about-cta {
+  background-color: var(--tb-slate-900);
+  padding: 5.5rem 0;
+  color: #ffffff;
+}
+
+.tb-cta-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+
+.tb-cta-desc {
+  color: var(--tb-slate-400);
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.6;
+}
+
+.tb-btn-cta-primary {
+  background-color: var(--tb-blue-600);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.tb-btn-cta-primary:hover {
+  background-color: var(--tb-blue-700);
+}
+
+.tb-btn-cta-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tb-btn-cta-secondary:hover {
+  background-color: #1e293b;
+  border-color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .tb-about-hero {
+    height: auto;
+    min-height: 440px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .tb-about-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .tb-content-section {
+    padding: 3.5rem 0;
+  }
+}
