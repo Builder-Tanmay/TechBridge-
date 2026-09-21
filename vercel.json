@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd techBridge && npm install && npm run build",
+  "outputDirectory": "techBridge/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

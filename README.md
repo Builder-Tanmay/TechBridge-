@@ -8,6 +8,9 @@
 [![Razorpay](https://img.shields.io/badge/Payment-Razorpay-02042B?logo=razorpay&logoColor=00BAF2)](https://razorpay.com/)
 [![Leaflet](https://img.shields.io/badge/Maps-Leaflet_OSM-199900?logo=leaflet&logoColor=white)](https://leafletjs.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBuilder-Tanmay%2FTechBridge-&root-directory=techBridge)
+
+> 🔗 **Live Demo (Frontend on Vercel):** [Deploy in 1-Click on Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBuilder-Tanmay%2FTechBridge-&root-directory=techBridge) *(or import into your Vercel account to get your personalized `.vercel.app` URL for your resume)*
 
 ---
 
